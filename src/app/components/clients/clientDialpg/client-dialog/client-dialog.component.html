@@ -1,0 +1,46 @@
+<div mat-dialog-title>
+  <h4>{{data.method}}</h4>
+  <button mat-icon-button type="button" class="btn btn-close" mat-dialog-close><i
+    class="mdi mdi-close font-size-24"></i></button>
+</div>
+<mat-dialog-content>
+  <form class="form" [formGroup]="clientForm">
+    <div class="input-field input-field--small">
+      <mat-form-field appearance="outline">
+        <mat-label>Имя</mat-label>
+        <input type="text" matInput required formControlName="name">
+        <mat-error *ngIf="clientForm.get('name')?.hasError('required')">Обязательное поле</mat-error>
+        <mat-error *ngIf="clientForm.get('name')?.hasError('minlength')">Имя должно быть минимум 2 символа</mat-error>
+      </mat-form-field>
+    </div>
+    <div class="input-field input-field--small">
+      <mat-form-field appearance="outline">
+        <mat-label>Фамилия</mat-label>
+        <input type="text" matInput required formControlName="surname">
+        <mat-error *ngIf="clientForm.get('surname')?.hasError('required')">Обязательное поле</mat-error>
+        <mat-error *ngIf="clientForm.get('surname')?.hasError('minlength')">Фамилия должно быть минимум 2 символа</mat-error>
+      </mat-form-field>
+    </div>   <div class="input-field input-field--small">
+      <mat-form-field appearance="outline">
+        <mat-label>E-mail</mat-label>
+        <input type="text" matInput required formControlName="email">
+        <mat-error *ngIf="f['email'].errors?.['required']">Обязательное поле</mat-error>
+        <mat-error *ngIf="f['email'].errors?.['email']">Введите коррейтный E-mail</mat-error>
+      </mat-form-field>
+    </div>   <div class="input-field input-field--small">
+      <mat-form-field appearance="outline">
+        <mat-label>Телефон</mat-label>
+        <input type="text" matInput formControlName="phone">
+        <mat-error *ngIf="f['phone'].errors?.['pattern']">Некорректный номер телефона</mat-error>
+      </mat-form-field>
+    </div>
+  </form>
+
+</mat-dialog-content>
+<div mat-dialog-actions>
+  <button mat-button color="default" mat-dialog-close type="button" class="btn-cancel">Отмена</button>
+  <button mat-raised-button color="primary" (click)="save()" type="button" >
+    <span>Сохранить</span>
+  </button>
+</div>
+
