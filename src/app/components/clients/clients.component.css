@@ -1,0 +1,14 @@
+.table {
+  background-color: white;
+  color: black;
+}
+
+.panel-body {
+  border-radius: 5px;
+}
+
+::ng-deep input.mat-input-element {
+  color: white;
+}
+
+/*# sourceMappingURL=clients.component.css.map */
