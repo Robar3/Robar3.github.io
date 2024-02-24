@@ -1,4 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
+
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html, body {
+  height: 100vh!important;
+  background-color: #e9fbff;
+  font-family: 'Roboto', sans-serif;
+  color: rgba(0, 0, 0, 0.87);
+  overflow-x: hidden;
+}
+.mat-mdc-checkbox.mat-mdc-checkbox-checked .mdc-checkbox__background{
+  background-color: #4A95F7 !important;
+  border-color: #4A95F7 !important;
+}
+.mat-mdc-checkbox[ng-reflect-indeterminate="true"] .mdc-checkbox__background{
+  background-color: #4A95F7 !important;
+  border-color: #4A95F7 !important;
+}
+
+.mdc-dialog__container>div{
+  border-radius: 20px !important;
+}

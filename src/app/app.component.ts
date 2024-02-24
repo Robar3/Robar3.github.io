@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import {ClientsComponent} from "./components/clients/clients.component";
-import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {ClientTableComponent} from "./components/clients/client-table/client-table.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, ClientsComponent],
+  imports: [RouterOutlet, ClientTableComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

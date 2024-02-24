@@ -1,3 +1,16 @@
+.success {
+  border-radius: 50px;
+}
 
+.deleteContainer {
+  margin: 40px;
+}
+
+.buttons {
+  padding: 40px 22px 16px 22px;
+  width: 100%;
+  display: flex;
+  justify-content: end;
+}
 
 /*# sourceMappingURL=delete-dialog.component.css.map */
