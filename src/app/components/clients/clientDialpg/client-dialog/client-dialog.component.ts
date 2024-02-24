@@ -48,7 +48,7 @@ export class ClientDialogComponent {
         name: new FormControl('', [Validators.required, Validators.minLength(2)]),
         surname: new FormControl('', [Validators.required, Validators.minLength(2)]),
         email: new FormControl('', [Validators.required, Validators.email]),
-        phone: new FormControl('', [Validators.pattern("^((8|\\+7)[\\- ]?)?(\\(?\\d{3}\\)?[\\- ]?)?[\\d\\- ]{7,10}$")],),
+        phone: new FormControl('', [Validators.pattern("([\\+]?[7|8][\\s-(]?[9][0-9]{2}[\\s-)]?)?([\\d]{3})[\\s-]?([\\d]{2})[\\s-]?([\\d]{2})")],),
       })
     else {
       this.clientForm = this.fb.group({
