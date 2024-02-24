@@ -1,0 +1,44 @@
+.table {
+  background-color: white;
+  color: black;
+  border-radius: 20px;
+  padding-left: 16px;
+}
+
+.buttons {
+  padding-top: 16px;
+  padding-left: 16px;
+}
+
+.button {
+  border-radius: 50%;
+  background-color: white;
+  border: none;
+}
+.button:hover:not([disabled]) {
+  background-color: #E2EEFF;
+}
+.button:active:not([disabled]) {
+  background-color: #B5D3FF;
+}
+
+.button[disabled] > img {
+  filter: invert(79%) sepia(19%) saturate(204%) hue-rotate(181deg) brightness(89%) contrast(83%);
+}
+
+.client {
+  padding-left: 12px;
+  color: #2F7FD5;
+}
+
+.clientName:hover {
+  color: #2F4C97;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.tableHeader {
+  color: #2F4C97;
+}
+
+/*# sourceMappingURL=client-table.component.css.map */
