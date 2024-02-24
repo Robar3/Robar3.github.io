@@ -41,7 +41,6 @@ export class ClientTableComponent implements AfterViewInit {
       this.dataSource.data = this.dataSource.data.slice();
     } else {
       clientService.getData().subscribe((data: ClientsInterface) => {
-        let users: Array<UserWithId> = [];
         for (let i = 0; i < data.users.length; i++) {
           this.dataSource.data.push({...data.users[i], id: i.toString()});
         }
