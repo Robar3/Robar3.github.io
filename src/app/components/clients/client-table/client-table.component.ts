@@ -87,7 +87,7 @@ export class ClientTableComponent implements AfterViewInit {
 
   addUser() {
     this.dialog.open(ClientDialogComponent, {
-      minWidth: '400px',
+      maxWidth: '450px',
       data: {
         method: 'Новый клиент'
       },
@@ -108,8 +108,7 @@ export class ClientTableComponent implements AfterViewInit {
 
   refactorUser(user: UserWithId) {
     this.dialog.open(ClientDialogComponent, {
-      minWidth: '450px',
-      minHeight: '300px',
+      maxWidth: '450px',
       data: {
         method: 'Редактирование',
         user: user
@@ -128,7 +127,7 @@ export class ClientTableComponent implements AfterViewInit {
 
   deleteUser() {
     this.dialog.open(DeleteDialogComponent, {
-      minWidth: '400px',
+      maxWidth: '400px',
       data: this.selectedID.length,
       autoFocus: false,
     }).afterClosed().subscribe(isDelete => {
