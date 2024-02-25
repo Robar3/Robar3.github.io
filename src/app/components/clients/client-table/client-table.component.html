@@ -5,8 +5,7 @@
     <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Mia" #input>
   </mat-form-field>
 
-  <div class="table">
-    <section class="example-container mat-elevation-z8" tabindex="0">
+  <div class="example-container mat-elevation-z8 table" tabindex="0">
       <div class="buttons">
         <button (click)="addUser()" class="button">
           <img src="./assets/add.svg" alt="add">
@@ -63,7 +62,6 @@
         <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
         <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
       </table>
-    </section>
   </div>
 
 </div>
