@@ -8,20 +8,20 @@
         <mat-label>Имя</mat-label>
         <input type="text" matInput required formControlName="name">
         <mat-error *ngIf="clientForm.get('name')?.hasError('required')">Обязательное поле</mat-error>
-        <mat-error *ngIf="clientForm.get('name')?.hasError('minlength')">Имя должно быть минимум 2 символа</mat-error>
+        <mat-error *ngIf="clientForm.get('name')?.hasError('minlength')">Минимальное количество символов: 2</mat-error>
       </mat-form-field>
       <mat-form-field appearance="outline">
         <mat-label>Фамилия</mat-label>
         <input type="text" matInput required formControlName="surname">
         <mat-error *ngIf="clientForm.get('surname')?.hasError('required')">Обязательное поле</mat-error>
-        <mat-error *ngIf="clientForm.get('surname')?.hasError('minlength')">Фамилия должно быть минимум 2 символа
+        <mat-error *ngIf="clientForm.get('surname')?.hasError('minlength')">Минимальное количество символов: 2
         </mat-error>
       </mat-form-field>
       <mat-form-field appearance="outline">
         <mat-label>E-mail</mat-label>
         <input type="text" matInput required formControlName="email">
         <mat-error *ngIf="f['email'].errors?.['required']">Обязательное поле</mat-error>
-        <mat-error *ngIf="f['email'].errors?.['email']">Введите коррейтный E-mail</mat-error>
+        <mat-error *ngIf="f['email'].errors?.['email']">Некорректный адрес</mat-error>
       </mat-form-field>
       <mat-form-field appearance="outline">
         <mat-label>Телефон</mat-label>

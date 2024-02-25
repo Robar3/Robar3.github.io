@@ -13,7 +13,7 @@ html, body {
   background-color: #4A95F7 !important;
   border-color: #4A95F7 !important;
 }
-.mat-mdc-checkbox[ng-reflect-indeterminate="true"] .mdc-checkbox__background{
+.mdc-checkbox__native-control[aria-checked]~ .mdc-checkbox__background{
   background-color: #4A95F7 !important;
   border-color: #4A95F7 !important;
 }
